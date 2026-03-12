@@ -31,15 +31,27 @@
     code {
       background-color: #f5f5f5;
     }
-
-    #jsoneditor {
-      width: 100%;
-      height: 100%;
-    }
   </style>
 </head>
 <body>
-<div id="jsoneditor"></div>
+<div id="app">
+  <div id="left-pane">
+    <div id="jsoneditor-code"></div>
+  </div>
+  <div id="right-pane">
+    <div id="right-toolbar">
+      <div class="toolbar-group">
+        <button id="btn-expand" class="toolbar-btn">展开树</button>
+        <button id="btn-collapse" class="toolbar-btn">合并树</button>
+      </div>
+      <div class="toolbar-group toolbar-search">
+        <input id="search-input" type="text" placeholder="搜索关键词" />
+        <span id="search-count"></span>
+      </div>
+    </div>
+    <div id="jsoneditor-view"></div>
+  </div>
+</div>
 <script src="./resources/main.js"></script>
 </body>
 </html>
